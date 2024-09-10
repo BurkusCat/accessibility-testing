@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Platform, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-explore-container',
@@ -9,4 +10,20 @@ export class ExploreContainerComponent {
 
   @Input() name?: string;
 
+  constructor(
+    public platform: Platform,
+    public loadingCtrl: LoadingController,
+  ) { }
+
+  public async openLoadingDialog() {
+
+    const loadingDialog = await this.loadingCtrl.create({
+      message: 'Loading...',
+    });
+
+    await loadingDialog.present();
+    await loadingDialog.present();
+    await new Promise((r, j) => setTimeout(r, 8000));
+    await loadingDialog.dismiss();
+  }
 }
