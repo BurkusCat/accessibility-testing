@@ -18,7 +18,10 @@ export class ExploreContainerComponent {
   public async openLoadingDialog() {
 
     const loadingDialog = await this.loadingCtrl.create({
-      message: 'Loading...',
+      message: 'Processing...',
+      htmlAttributes: {
+        'aria-label': 'Just Processing without anything else',
+      },
     });
 
     await loadingDialog.present();
