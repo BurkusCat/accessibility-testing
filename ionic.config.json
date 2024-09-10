@@ -1,0 +1,8 @@
+{
+  "name": "AccessibilityTesting",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "1c41084d"
+}
