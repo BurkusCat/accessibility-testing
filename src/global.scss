@@ -35,3 +35,191 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+ion-navbar {
+    height: 70px;
+
+    ion-buttons {
+        ion-icon {
+            font-size: 22pt;
+            display: block;
+        }
+    }
+
+    .toolbar-title-ios {
+        width: 45vw;
+        text-align: center;
+        margin: 0 auto;
+        overflow: unset !important;
+        word-wrap: break-word;
+    }
+}
+
+ion-select {
+    .select-text {
+        white-space: pre-line;
+        text-align: right;
+    }
+}
+
+ion-label {
+    white-space: normal !important;
+    text-overflow: unset !important;
+    overflow: unset !important;
+}
+
+.alert-tappable.alert-radio {
+    height: auto;
+    contain: content;
+}
+
+.alert-radio-label {
+    white-space: normal !important;
+    text-overflow: unset !important;
+    text-transform: uppercase;
+}
+
+ion-button {
+    white-space: normal !important;
+}
+
+// Makes sure the answers in inputs are uppercased and the labels are not
+ion-input,
+.native-input {
+    text-transform: uppercase !important;
+
+    label {
+        text-transform: none;
+    }
+}
+
+// Makes sure the answers in ion-textarea are uppercased and the labels are not
+ion-textarea,
+.native-textarea {
+    text-transform: uppercase !important;
+
+    label {
+        text-transform: none;
+    }
+}
+
+
+ion-option-select {
+    .select-text {
+        text-transform: uppercase;
+    }
+}
+
+ion-textarea {
+    text-transform: uppercase;
+}
+
+hr {
+    background-color: #eeeeee;
+}
+
+textarea {
+    text-transform: uppercase;
+}
+
+.field-invalid {
+    background-color: var(--ion-color-warning) !important;
+    --ion-background-color: var(--ion-color-warning) !important;
+    color: #000 !important;
+    --background: var(--ion-color-warning) !important;
+
+    .item {
+        background-color: var(--ion-color-warning) !important;
+        --ion-background-color: var(--ion-color-warning) !important;
+    }
+
+    ion-label {
+        color: #000 !important;
+    }
+}
+
+.error-text {
+    color: crimson;
+}
+
+// Allows long ion-select labels to grow to appropriate size
+ion-select::part(label) {
+    max-width: 70% !important;
+}
+
+// Aligns and transforms ion-select answers
+ion-select::part(text) {
+    white-space: normal !important;
+    transform: none !important;
+    text-transform: uppercase !important;
+    float: right;
+    text-align: right;
+    max-width: unset !important;
+    flex: 1 1 50%;
+}
+
+// Allows long ion-checkbox labels to grow to appropriate size
+ion-checkbox::part(label) {
+    white-space: normal !important;
+    transform: none !important;
+    max-width: unset !important;
+    flex: 1 1 50%;
+}
+
+// Allows long ion-select labels to grow to appropriate size
+ion-select::part(label) {
+    white-space: pre-line !important;
+    transform: none !important;
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    text-wrap: pretty !important;
+    flex: 1 1 50%;
+}
+
+// Aligns the forbidden-characters of certain ion-inputs
+ion-item:has(> ion-input)::part(native) {
+    flex-direction: column;
+}
+
+// For ion-inputs that have special alignment requirements to the start
+ion-item.start-placement::part(native) {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// // For ion-inputs that have special alignment requirements to the start, Ensures the counter label doesn't wrap too early
+ion-item.start-placement>label {
+    min-width: 65% !important;
+}
+
+crash-date-picker[slot="end"] {
+    margin-inline-start: 0px;
+}
+
+.alert-checkbox-label {
+    text-transform: uppercase !important;
+    white-space: normal !important;
+    text-overflow: unset !important;
+}
+
+ion-input.counter-input {
+    max-width: 50% !important;
+}
+
+ion-label.warning-label {
+    font-size: 12px !important;
+    color: grey !important;
+}
+
+// https://ionic.io/docs/accessibility/visibility
+.screenreader-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 1px;
+}
