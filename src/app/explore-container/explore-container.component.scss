@@ -25,3 +25,8 @@
 #container a {
   text-decoration: none;
 }
+
+// Transforms ion-select answers
+ion-select::part(text) {
+  text-transform: uppercase !important;
+}

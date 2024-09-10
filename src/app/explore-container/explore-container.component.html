@@ -1,3 +1,14 @@
 <div id="container">
   <ion-button (click)="openLoadingDialog()">Open loading dialog</ion-button>
+  
+  <ion-item>
+    <ion-select>
+        <div slot="label"
+            class="ion-text-wrap">Yay or nay</div>
+        <ion-select-option [value]="true"
+          aria-label="Yes it is right">Yes</ion-select-option>
+        <ion-select-option [value]="false"
+          aria-label="No not correct">No</ion-select-option>
+    </ion-select>
+</ion-item>
 </div>
