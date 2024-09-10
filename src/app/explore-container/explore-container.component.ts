@@ -45,6 +45,9 @@ export class ExploreContainerComponent {
             ' <strong>PREFEREABLY</strong> it should be read out' +
             ' in one long go',
         header: 'Warning',
+        htmlAttributes: {
+            'aria-role': 'text',
+        },
     });
 
     await headInjuryAlert.present();
